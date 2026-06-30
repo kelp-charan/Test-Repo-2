@@ -1,0 +1,32 @@
+{
+    "name": "kelp-shared-library",
+    "version": "1.0.0",
+    "description": "A share lib used across frontend and backend",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc --build",
+        "dev": "tsc --build --watch",
+        "lint": "eslint ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "private",
+    "devDependencies": {
+        "@eslint/js": "9.21.0",
+        "@nx/eslint-plugin": "22.6.5",
+        "@types/lodash": "4.17.24",
+        "@types/node": "22.19.17",
+        "@typescript-eslint/eslint-plugin": "8.58.2",
+        "@typescript-eslint/parser": "8.58.2",
+        "eslint": "10.2.1",
+        "eslint-config-prettier": "10.1.8",
+        "eslint-plugin-sonarjs": "4.0.3",
+        "prettier": "3.8.3",
+        "typescript": "5.9.3",
+        "typescript-eslint": "8.58.2"
+    },
+    "dependencies": {
+        "lodash": "4.18.1",
+        "moment": "2.30.1"
+    }
+}

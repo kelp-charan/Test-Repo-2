@@ -1,0 +1,58 @@
+{
+    "name": "kelp",
+    "version": "1.0.0",
+    "description": "",
+    "author": "",
+    "license": "private",
+    "scripts": {
+        "install:client": "pnpm --prefix client install",
+        "install:server": "pnpm --prefix server install",
+        "install:shared-library": "pnpm --prefix shared-library install",
+        "install:tools:postgres-migrations": "npm --prefix tools/postgres-migrations ci",
+        "install:tools:config-migrations": "npm --prefix tools/config-migrations ci",
+        "install:tools:license": "npm --prefix tools/license-tool install",
+        "install:tools:deal-tool": "npm --prefix tools/deal-tool install",
+        "install:tools:modules-elastic-sync": "npm --prefix tools/modules-elastic-sync install",
+        "install": "npm-run-all install:*",
+        "lint:client": "pnpm --prefix client run lint",
+        "lint:server": "pnpm --prefix server run lint",
+        "lint:shared-library": "pnpm --prefix shared-library run lint",
+        "lint:tools:postgres-migrations": "npm --prefix tools/postgres-migrations run lint",
+        "lint:tools:config-migrations": "npm --prefix tools/config-migrations run lint",
+        "lint:tools:license": "npm --prefix tools/license-tool run lint",
+        "lint:tools:deal-tool": "npm --prefix tools/deal-tool run lint",
+        "lint": "npm-run-all lint:*",
+        "test:tools:postgres-migrations": "npm --prefix tools/postgres-migrations run test",
+        "test:server:test": "pnpm --prefix server run test",
+        "build:client": "export NODE_OPTIONS=--max_old_space_size=10240 && npm --prefix client run build",
+        "build:server": "pnpm --prefix server run build",
+        "build:shared-library": "pnpm --prefix shared-library run build",
+        "build:uikit-storybook": "export NODE_OPTIONS=--max_old_space_size=4096 && npm --prefix client run build:storybook",
+        "build:tools:license": "npm --prefix tools/license-tool run build",
+        "build:tools:deal-tool": "npm --prefix tools/deal-tool run build",
+        "build:tools:postgres-migrations": "npm --prefix tools/postgres-migrations run build",
+        "build": "npm-run-all build:*",
+        "clean:server": "rm -rf server/node_modules && rm -rf server/dist",
+        "clean:client": "rm -rf client/node_modules && rm -rf client/dist",
+        "clean:shared-library": "rm -rf shared-library/node_modules && rm -rf shared-library/dist",
+        "clean:tools:license": "rm -rf tools/license-tool/node_modules && rm -rf tools/license-tool/dist",
+        "clean:tools:deal-tool": "rm -rf tools/deal-tool/node_modules && rm -rf tools/deal-tool/dist",
+        "clean": "npm-run-all clean:*",
+        "all": "npm-run-all clean install lint build",
+        "validate:tools:postgres-migrations": "npm --prefix tools/postgres-migrations run validate",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "*.{js,ts,json,md,css,scss}": [
+            "prettier --write"
+        ]
+    },
+    "devDependencies": {
+        "@commitlint/cli": "19.6.0",
+        "@commitlint/config-conventional": "19.6.0",
+        "husky": "9.1.7",
+        "lint-staged": "15.2.11",
+        "npm-run-all": "4.1.5",
+        "prettier": "3.4.2"
+    }
+}
