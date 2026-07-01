@@ -82,7 +82,7 @@
         "exceljs": "4.4.0",
         "express": "5.2.1",
         "extract-zip": "2.0.1",
-        "file-type": "16.5.4",
+        "file-type": "21.3.2",
         "helmet": "8.1.0",
         "js-confuser": "2.0.1",
         "json-2-csv": "5.5.10",
