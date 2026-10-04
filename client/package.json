@@ -80,7 +80,7 @@
         "office-addin-dev-certs": "2.0.3",
         "office-toolbox": "0.3.0",
         "office-ui-fabric-js": "1.5.0",
-        "pdfjs-dist": "3.11.174",
+        "pdfjs-dist": "6.4.299",
         "posthog-js": "^1.343.0",
         "rxjs": "7.8.2",
         "socket.io-client": "4.8.1",
