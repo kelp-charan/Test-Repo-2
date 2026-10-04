@@ -65,7 +65,7 @@
         "lodash": "4.18.1",
         "lodash-es": "4.18.1",
         "mathjs": "14.7.0",
-        "moment": "2.30.1",
+        "moment": "2.31.0",
         "moment-timezone": "0.6.0",
         "ng2-file-upload": "9.0.0",
         "ngx-angular-query-builder": "file:./external-lib/ngx-angular-query-builder-20.0.0.tgz",
